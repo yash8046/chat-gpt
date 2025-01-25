@@ -7,7 +7,9 @@ function App() {
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-
+  const cors = require("cors");
+  app.use(cors());
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true); // Set loading to true when the request starts
