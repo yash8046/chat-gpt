@@ -15,7 +15,7 @@ function App() {
     setResponse(""); // Clear any previous response
 
     axios
-      .post("https://chat-gpt-seven-tau-98.vercel.app/chat", { prompt })
+    .post("https://chat-gpt-seven-tau-98.vercel.app/chat", { prompt })
       .then((res) => {
         setResponse(res.data.response); // Set response from server
         setLoading(false); // End loading
