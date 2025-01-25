@@ -3,12 +3,13 @@ import axios from "axios";
 import { useState } from "react";
 
 function App() {
+  const cors = require("cors");
+  app.use(cors());
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const cors = require("cors");
-  app.use(cors());
+
   
   const handleSubmit = (e) => {
     e.preventDefault();
